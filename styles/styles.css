@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root {
+  --mainbg-color: rgb(240, 239, 243);
+  --cardbg-color: white;
+  --bx-shadow: 4px 4px 30px rgba(0, 0, 0, 0.06);
+  --pDetailsColor: #1d1d1d;
+}
+
+.dark-mode {
+  --mainbg-color: rgb(18, 14, 29);
+  --cardbg-color: rgb(155, 141, 141);
+  --bx-shadow: 4px 4px 30px rgba(0, 0, 0, 0.06);
+  --pDetailsColor: white;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--mainbg-color);
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container {
+  width: 375px;
+  height: 520px;
+  background-color: var(--cardbg-color);
+  border-radius: 15px;
+  -webkit-box-shadow: var(--bx-shadow);
+          box-shadow: var(--bx-shadow);
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+body .container .conTop form {
+  width: 100%;
+  border: 1px solid #524aeb;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+body .container .conTop form i {
+  padding-left: 10px;
+}
+
+body .container .conTop form input {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 100%;
+  font-weight: 600;
+  padding: 8px 10px;
+}
+
+body .container .productList {
+  padding: 15px 0;
+}
+
+body .container .productList .product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  border-top: 1px solid var(--mainbg-color);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+body .container .productList .product img {
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+body .container .productList .product .pDetails {
+  padding-left: 15px;
+  padding-right: 5px;
+}
+
+body .container .productList .product .pDetails h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--pDetailsColor);
+}
+
+body .container .productList .product .pDetails h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--pDetailsColor);
+}
+
+body .container .productList .product:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  border: 1px solid var(--mainbg-color);
+  -webkit-box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+          box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+}
+
+body .container::-webkit-scrollbar {
+  display: none;
+}
+
+body .theme-btn {
+  top: 5%;
+  right: 3%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--cardbg-color);
+  cursor: pointer;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+body .theme-btn:active {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+body .theme-btn i {
+  font-size: 1.4rem;
+  color: var(--mainbg-color);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    max-width: 300px;
+  }
+  .theme-btn {
+    width: 20px;
+    height: 20px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
